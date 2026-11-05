@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Smash burgers feitos na hora, ingredientes frescos e batata crocante. Peça no Beco Burger."
+    />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>Beco Burger — mata a fome, acende a alegria</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Beco Burger, início">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BECO<span class="brand-accent">BURGER</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Nossa história</a>
+        <a href="#visite">Onde estamos</a>
+      </nav>
+      <button class="cart-button" type="button" aria-live="polite">
+        <span aria-hidden="true">Sacola</span>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BURGER DE VERDADE, SEM FRESCURA</p>
+          <h1>A fome bateu?<br />A gente <em>resolve.</em></h1>
+          <p class="hero-description">
+            Smash burger na chapa, pão macio e aquele queijo derretendo.
+            Feito na hora, do jeitinho que tem que ser.
+          </p>
+          <a class="button button-dark" href="#cardapio">
+            Ver o cardápio <span aria-hidden="true">↗</span>
+          </a>
+          <div class="hero-note">
+            <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
+            <span>Feito com carinho desde 2019</span>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85"
+            alt="Hambúrguer artesanal com queijo, alface e tomate"
+          />
+          <div class="hero-sticker" aria-label="Pão, carne e queijo. Só isso e tudo isso.">
+            <span>pão, carne<br />&amp; queijo</span>
+            <strong>♡</strong>
+          </div>
+          <div class="hero-caption">O clássico da casa <span>desde sempre.</span></div>
+        </div>
+      </section>
+
+      <section class="menu-section section-wrap" id="cardapio">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> ESCOLHA O SEU</p>
+            <h2>Favoritos do <em>beco.</em></h2>
+          </div>
+          <p>Ingredientes frescos, sem atalhos.<br />O resto é história.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-photo">
+              <img
+                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80"
+                alt="Beco Clássico com queijo e molho da casa"
+                loading="lazy"
+              />
+              <span class="menu-tag">O QUERIDINHO</span>
+            </div>
+            <div class="menu-info">
+              <div>
+                <h3>Beco Clássico</h3>
+                <p>Smash 160g, queijo prato, cebola caramelizada e molho da casa.</p>
+              </div>
+              <div class="menu-buy">
+                <strong>R$ 32</strong>
+                <button class="add-button" type="button" data-name="Beco Clássico" data-price="32" aria-label="Adicionar Beco Clássico à sacola">+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-photo">
+              <img
+                src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=80"
+                alt="Burger de frango crocante com salada"
+                loading="lazy"
+              />
+              <span class="menu-tag menu-tag-light">CROCÂNCIA REAL</span>
+            </div>
+            <div class="menu-info">
+              <div>
+                <h3>Frango do Beco</h3>
+                <p>Frango crocante, coleslaw fresquinha e maionese de limão.</p>
+              </div>
+              <div class="menu-buy">
+                <strong>R$ 29</strong>
+                <button class="add-button" type="button" data-name="Frango do Beco" data-price="29" aria-label="Adicionar Frango do Beco à sacola">+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-photo">
+              <img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80"
+                alt="Porção de batatas fritas douradas"
+                loading="lazy"
+              />
+              <span class="menu-tag menu-tag-light">PRA DIVIDIR (OU NÃO)</span>
+            </div>
+            <div class="menu-info">
+              <div>
+                <h3>Batata da Casa</h3>
+                <p>Batata rústica, páprica defumada e maionese verde.</p>
+              </div>
+              <div class="menu-buy">
+                <strong>R$ 18</strong>
+                <button class="add-button" type="button" data-name="Batata da Casa" data-price="18" aria-label="Adicionar Batata da Casa à sacola">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="cart-message" id="cart-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="about-section" id="sobre">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80"
+            alt="Interior acolhedor de uma lanchonete"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow"><span></span> UM POUCO DA GENTE</p>
+          <h2>O melhor lugar<br />é <em>perto da gente.</em></h2>
+          <p>
+            O Beco nasceu de uma chapa quente, uma receita de família e a vontade
+            de fazer comida boa sem complicar. Desde 2019, a gente capricha em
+            cada pedido como se fosse o primeiro.
+          </p>
+          <a href="#visite" class="text-link">Vem conhecer <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section class="visit-section section-wrap" id="visite">
+        <div>
+          <p class="eyebrow"><span></span> PASSA AQUI</p>
+          <h2>Seu próximo burger<br />tá logo <em>ali.</em></h2>
+        </div>
+        <div class="visit-details">
+          <div>
+            <span class="detail-label">ENDEREÇO</span>
+            <p>Rua das Palmeiras, 128<br />Centro — São Paulo, SP</p>
+          </div>
+          <div>
+            <span class="detail-label">HORÁRIO</span>
+            <p>Ter a dom, das 18h às 23h<br />Segunda a gente descansa.</p>
+          </div>
+        </div>
+        <a
+          class="button button-orange"
+          href="https://maps.google.com/?q=Rua+das+Palmeiras+128+Sao+Paulo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ver no mapa <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BECO<span class="brand-accent">BURGER</span></span>
+      </a>
+      <p>Feito com fome e carinho. © 2026 Beco Burger.</p>
+      <a class="back-top" href="#inicio">Voltar ao topo ↑</a>
+    </footer>
+  </body>
+</html>
